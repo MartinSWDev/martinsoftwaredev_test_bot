@@ -3,11 +3,11 @@ require("dotenv").config()
 const { discord_bot_token, guildId, clientId } = process.env;
 
 //discord
-const {Client, Collection, GatewayIntentBits } = require("discord.js");
+const {Client, Collection } = require("discord.js");
 // fs
 const fs = require("fs");
 
-const client = new Client({intents: GatewayIntentBits.Guilds });
+const client = new Client({intents: 32767 });
 client.commands = new Collection();
 client.buttons = new Collection();
 client.selectMenus = new Collection();
